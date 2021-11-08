@@ -6,34 +6,6 @@ public class UsoEmpleados {
 
 	public static void main(String[] args) {
 
-		/*
-		 * JefeEmpleado empleado1 = new JefeEmpleado();
-		 * 
-		 * System.out.println(empleado1.GetTareas());
-		 * 
-		 * 
-		 * Empleado empleado2 = new JefeEmpleado();
-		 * 
-		 * System.out.println(empleado2.GetTareas());
-		 * 
-		 * 
-		 * Empleado empleado3 = new Secretario();
-		 * 
-		 * System.out.println(empleado3.GetTareas());
-		 * 
-		 * 
-		 * Secretario empleado4 = new Secretario();
-		 * 
-		 * System.out.println(empleado4.GetTareas());
-		 * 
-		 * System.out.println(empleado4.Getpagos());
-		 * 
-		 * Empleado empleado5 = new Secretario();
-		 * 
-		 * System.out.println(empleado5.GetTareas());
-		 */
-
-		// ****************************************************************
 
 		// pasos para Utilizar contenedor de Spring
 
@@ -47,28 +19,67 @@ public class UsoEmpleados {
 
 		// 3 usar el objeto Bean
 
-		System.out.println(manu.GetTareas());
+		System.out.println(manu.getTareas());
 		
-
-		Secretario secre = contexto.getBean("miSecretario", Secretario.class);
-
-		System.out.println(secre.Getpagos());
-
-		System.out.println(secre.GetTareas());
+		System.out.println(manu.getInforme());
 		
 		
-		Empleado secre1 = contexto.getBean("miSecretario", Secretario.class);
 		
-		System.out.println("solo hacer tareas secretario y "+secre1.GetTareas());
+		Empleado jefeEmpleado = contexto.getBean("miJefeEmpleado", Empleado.class);
+		
+		System.out.println(jefeEmpleado.getInforme());
 
 		// 4 Cerrar el contexto
 
 		contexto.close();
 
-		// ahora en el applicationContext.xml podemos poner otro tipo de objeto en lugar
-		// de
-		// JefeEmleado
 
 	}
 
 }
+
+
+
+
+
+
+
+/*
+ * JefeEmpleado empleado1 = new JefeEmpleado();
+ * 
+ * System.out.println(empleado1.GetTareas());
+ * 
+ * 
+ * Empleado empleado2 = new JefeEmpleado();
+ * 
+ * System.out.println(empleado2.GetTareas());
+ * 
+ * 
+ * Empleado empleado3 = new Secretario();
+ * 
+ * System.out.println(empleado3.GetTareas());
+ * 
+ * 
+ * Secretario empleado4 = new Secretario();
+ * 
+ * System.out.println(empleado4.GetTareas());
+ * 
+ * System.out.println(empleado4.Getpagos());
+ * 
+ * Empleado empleado5 = new Secretario();
+ * 
+ * System.out.println(empleado5.GetTareas());
+ */
+
+// ****************************************************************
+//
+//		Secretario secre = contexto.getBean("miSecretario", Secretario.class);
+//
+//		System.out.println(secre.Getpagos());
+//
+//		System.out.println(secre.GetTareas());
+//		
+//		
+//		Empleado secre1 = contexto.getBean("miSecretario", Secretario.class);
+//		
+//		System.out.println("solo hacer tareas secretario y "+ secre1.GetTareas() +   secre1.getInforme());
