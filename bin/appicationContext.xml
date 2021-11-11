@@ -12,21 +12,40 @@
 
 	<!-- CREACION DE LA DEPENDENCIA -->
 
-	<bean id="miInfomrme" class="es.manu.IoC.Informe"></bean>
+	<bean id="miInforme" class="es.manu.IoC.Informe"></bean>
+
+
+	<!-- INYECCIONES DE DEPENDENCIAS -->
+
+	<!-- INYECCION DEPENDENCIAS CONSTRUCTOR -->
 
 	<bean id="miEmpleado" class="es.manu.IoC.DirectorEmpleado">
 
-		<constructor-arg ref="miInfomrme">
-
-		</constructor-arg>
+		<constructor-arg ref="miInforme"></constructor-arg>
 
 	</bean>
+	
+	<!-- INYECCION DEPENDENCIAS CON CONSTRUCTOR Y CAMPOS-->
 
 	<bean id="miJefeEmpleado" class="es.manu.IoC.JefeEmpleado">
 
-		<constructor-arg ref="miInfomrme">
+		<constructor-arg ref="miInforme"></constructor-arg>
+		
+			<property name="email" value="Jefes@gmail.com"></property>
+		
+		    <property name="nombreEmpresa" value="ManuelSfot S.A"></property>
 
-		</constructor-arg>
+	</bean>
+
+	<!-- INYECCION DEPENDENCIAS CON SETTERS Y CAMPOS-->
+
+	<bean id="miSecretario" class="es.manu.IoC.SecretarioEmpleado">
+
+		<property name="informeNuevo" ref="miInforme"></property>
+		
+		<property name="email" value="Secretariado@gmail.com"></property>
+		
+		<property name="nombreEmpresa" value="ManuelSfot S.A"></property>
 
 	</bean>
 

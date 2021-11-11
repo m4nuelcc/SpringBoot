@@ -1,4 +1,4 @@
-package es.manu.IoC;
+package es.manu.propierty;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,19 +8,23 @@ public class UsoEmpleados {
 
 // **********************UTILIZANDO SPRING***************************
 
-		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("appicationContext.xml");
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("appicationContextPropierty.xml");
 
 		Empleados Manu = contexto.getBean("miEmpleado", Empleados.class);
 
 		System.out.println(Manu.getTareas());
+		
+		System.out.println(Manu.getInforme());
+		
+		
 
 		Empleados Manu1 = contexto.getBean("miJefeEmpleado", Empleados.class);
 
 		System.out.println(Manu1.getTareas());
 
-		System.out.println(Manu.getInforme());
-
 		System.out.println(Manu1.getInforme());
+		
+		
 
 	
 
@@ -31,6 +35,8 @@ public class UsoEmpleados {
 		System.out.println(secre.getTareas());
 
 		System.out.println(secre.getInforme());
+		
+		
 
 		// IMPRIMIENDO DATOS INYECTADOS
 
@@ -41,13 +47,22 @@ public class UsoEmpleados {
 		System.out.println("Empresa: " + secreDatos.getNombreEmpresa());
 		
 		
+		
+		
 		JefeEmpleado jefeDatos = contexto.getBean("miJefeEmpleado", JefeEmpleado.class);
 
 		System.out.println("Email jefes: " + jefeDatos.getEmail());
 
 		System.out.println("Empresa: " + jefeDatos.getNombreEmpresa());
 
-		contexto.close();
+		// Obteniendo los datos desde un fichero property
+		
+		DirectorEmpleado miDirector = contexto.getBean("midirector", DirectorEmpleado.class);
+		
+		System.out.println(miDirector.getEmail());
+		System.out.println(miDirector.getNombreEmpresa());
+		System.out.println(miDirector.getInforme());
+		System.out.println(miDirector.getTareas());
 
 		
 

@@ -1,4 +1,4 @@
-package es.manu.IoC;
+package es.manu.propierty;
 
 public class JefeEmpleado  implements Empleados{
 	

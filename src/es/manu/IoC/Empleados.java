@@ -1,9 +1,10 @@
 package es.manu.IoC;
 
-public interface Empleado {
+public interface Empleados {
 	
 	public String getTareas(); 
 	
 	public String getInforme();
+	
 
 }

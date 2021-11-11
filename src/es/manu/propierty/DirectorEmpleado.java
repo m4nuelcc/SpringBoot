@@ -1,9 +1,30 @@
-package es.manu.IoC;
+package es.manu.propierty;
 
 public class DirectorEmpleado implements Empleados {
 	
+	private String nombreEmpresa;
+	
+	private String email;
+	
+	
 	//CREACION DE CAMPO TIPO CREACIONINFORME (INTERFAZ)
 	
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	private CreacionInformes informeNuevo;
 	
 	//CREACION DE CONSTRUCTOR QUE INYECTA LA DEPENDENCIA

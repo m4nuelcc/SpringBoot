@@ -1,10 +1,13 @@
-package es.manu.IoC;
+package es.manu.propierty;
 
-public class JefeEmpleado  implements Empleados{
+public class SecretarioEmpleado implements Empleados {
 	
 	private String nombreEmpresa;
 	
 	private String email;
+	
+	private CreacionInformes informeNuevo;
+	
 	
 	public String getNombreEmpresa() {
 		return nombreEmpresa;
@@ -30,23 +33,18 @@ public class JefeEmpleado  implements Empleados{
 		this.informeNuevo = informeNuevo;
 	}
 
-	private CreacionInformes informeNuevo;
-	
-	public JefeEmpleado(CreacionInformes informeNuevo) {
-		
-		this.informeNuevo = informeNuevo;
-	}
-
+	@Override
 	public String getTareas() {
 		
-		return"JefeEmpleado realiza sus tareas";
+		return "SecretarioEmpleado hace sus tareas. ";
 	}
 
 	@Override
 	public String getInforme() {
 		
-		return "Este informe lo ha creado JEFEMPLEADO " + informeNuevo.getInforme();
+		return "Este informe lo ha creado SECRETARIOEMPLEADO " + informeNuevo.getInforme();
 	}
+	
 
 
 }
