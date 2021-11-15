@@ -8,8 +8,7 @@ public class UsoEmpleados {
 
 // **********************UTILIZANDO SPRING***************************
 
-		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext(
-				"appicationContextSingletonPrototype.xml");
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("appicationContextSingletonPrototype.xml");
 
 		// PETICION DE LOS BEANS AL CONTENERDOR
 

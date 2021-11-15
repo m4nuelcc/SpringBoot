@@ -9,24 +9,6 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
-
-
-	<!-- CREACION DE LA DEPENDENCIA -->
-
-	<bean id="miInforme" class="es.manu.SingletonPrototype.Informe"></bean>
-
-
-	<!-- INYECCIONES DE DEPENDENCIAS -->
-
-
-	<bean id="miSecretario" class="es.manu.SingletonPrototype.SecretarioEmpleado" scope="prototype">
-
-		<property name="informeNuevo" ref="miInforme"></property>
-		
-		<property name="email" value="Secretariado@gmail.com"></property>
-		
-		<property name="nombreEmpresa" value="ManuelSfot S.A"></property>
-
-	</bean>
+<context:component-scan base-package="es.manu.AnnotationsSingletonPrototype"></context:component-scan>
 
 </beans>

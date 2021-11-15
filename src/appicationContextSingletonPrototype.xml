@@ -10,6 +10,7 @@
 ">
 
 
+
 	<!-- CREACION DE LA DEPENDENCIA -->
 
 	<bean id="miInforme" class="es.manu.SingletonPrototype.Informe"></bean>
@@ -27,6 +28,5 @@
 		<property name="nombreEmpresa" value="ManuelSfot S.A"></property>
 
 	</bean>
-
 
 </beans>
