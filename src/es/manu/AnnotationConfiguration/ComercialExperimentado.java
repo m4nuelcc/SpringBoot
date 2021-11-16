@@ -1,4 +1,4 @@
-package es.manu.AnnotationsPostConstructPreDestroy;
+package es.manu.AnnotationConfiguration;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
